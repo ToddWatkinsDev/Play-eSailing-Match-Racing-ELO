@@ -16,8 +16,8 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 <!-- LEADERBOARD_START -->
 | Rank | Sailor | Rating | Highest | Lowest |
 |------|--------|--------|---------|--------|
-| 🥇 | Willman | **1568** | 1568 | 1500 |
-| 🥈 | Booshify | **1560** | 1560 | 1492 |
+| 🥇 | Booshify | **1569** | 1580 | 1492 |
+| 🥈 | Willman | **1559** | 1568 | 1500 |
 | 🥉 | Jakob | **1541** | 1542 | 1500 |
 | 4 | Jerseytbw | **1519** | 1540 | 1500 |
 | 5 | Geobro | **1506** | 1506 | 1458 |
@@ -25,7 +25,7 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 | 7 | Endourx | **1437** | 1508 | 1437 |
 | 8 | Corner | **1425** | 1500 | 1425 |
 
-_Last updated: 09 Jun 2026 13:28 UTC_
+_Last updated: 09 Jun 2026 13:29 UTC_
 <!-- LEADERBOARD_END -->
 
 ---
@@ -35,8 +35,8 @@ _Last updated: 09 Jun 2026 13:28 UTC_
 <!-- RECENT_MATCHES_START -->
 | Match | Event | Date | Winner | Ratings |
 |-------|-------|------|--------|----------|
-| M00047 | Match Race Test Event | 2026-03-16 | 🏆 **Jerseytbw** def. Endourx | Jerseytbw (+8) vs Endourx (-8) |
-| M00046 | Match Race Test Event | 2026-03-16 | 🏆 **Jerseytbw** def. Endourx | Jerseytbw (+9) vs Endourx (-9) |
+| M00050 | Match Race Test Event | 2026-03-16 | 🏆 **Willman** def. Booshify | Willman (+11) vs Booshify (-11) |
+| M00049 | Match Race Test Event | 2026-03-16 | 🏆 **Booshify** def. Willman | Willman (-10) vs Booshify (+10) |
 <!-- RECENT_MATCHES_END -->
 
 ---
