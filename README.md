@@ -18,15 +18,15 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 |------|--------|--------|---------|--------|
 | 🥇 | Willman | **1594** | 1617 | 1500 |
 | 🥈 | Geobro | **1569** | 1569 | 1458 |
-| 🥉 | Booshify | **1557** | 1580 | 1492 |
+| 🥉 | Booshify | **1559** | 1580 | 1492 |
 | 4 | Jerseytbw | **1544** | 1544 | 1500 |
 | 5 | Jakob | **1504** | 1542 | 1500 |
-| 6 | Liam Dimock | **1479** | 1488 | 1479 |
+| 6 | Liam Dimock | **1477** | 1488 | 1464 |
 | 7 | Endourx | **1446** | 1508 | 1437 |
 | 8 | MudCreek | **1412** | 1500 | 1412 |
 | 9 | Corner | **1395** | 1500 | 1395 |
 
-_Last updated: 09 Jun 2026 13:42 UTC_
+_Last updated: 09 Jun 2026 13:43 UTC_
 <!-- LEADERBOARD_END -->
 
 ---
@@ -36,8 +36,8 @@ _Last updated: 09 Jun 2026 13:42 UTC_
 <!-- RECENT_MATCHES_START -->
 | Match | Event | Date | Winner | Ratings |
 |-------|-------|------|--------|----------|
-| M00080 | Summer Match Race | 2026-05-11 | 🏆 **Geobro** def. Willman | Geobro (+11) vs Willman (-11) |
-| M00079 | Summer Match Race | 2026-05-11 | 🏆 **Geobro** def. Willman | Geobro (+12) vs Willman (-12) |
+| M00083 | Summer Match Race | 2026-05-11 | 🏆 **Liam Dimock** def. Booshify | Booshify (-13) vs Liam Dimock (+13) |
+| M00082 | Summer Match Race | 2026-05-11 | 🏆 **Booshify** def. Liam Dimock | Booshify (+7) vs Liam Dimock (-7) |
 <!-- RECENT_MATCHES_END -->
 
 ---
