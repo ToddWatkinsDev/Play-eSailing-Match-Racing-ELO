@@ -1,33 +1,48 @@
 # Play eSailing Match Racing ELO
 
-Elo rating system for Play eSailing match racing. Ratings are updated automatically via GitHub Actions each time a match result is submitted.
+An automated ELO rating system for Play eSailing match racing, powered by GitHub Issues and Actions.
+
+## How to Use
+
+- **Add a player** — open an issue using the *Register New Player* template and apply the `add-player` label
+- **Record a match** — open an issue using the *Record Match Result* template and apply the `record-match` label
+- **Dispute a result** — open an issue using the *Dispute Match Result* template
+- **Resolve a dispute** — admins open an issue using the *Resolve Dispute* template
 
 ---
 
-## 🏆 Top 10 Leaderboard
+## 🏆 Leaderboard
 
 <!-- LEADERBOARD_START -->
-_No matches recorded yet._
+| Rank | Sailor | Rating | Highest | Lowest |
+|------|--------|--------|---------|--------|
+| 🥇 | Jerseytbw | **1513** | 1513 | 1500 |
+| 🥈 | Booshify | **1502** | 1502 | 1492 |
+| 🥉 | Endourx | **1498** | 1508 | 1498 |
+| 4 | Corner | **1487** | 1500 | 1487 |
+| 5 | MudCreek | **1500** | 1500 | 1500 |
+| 6 | Jakob | **1500** | 1500 | 1500 |
+| 7 | Geobro | **1500** | 1500 | 1500 |
+| 8 | Willman | **1500** | 1500 | 1500 |
+
+_Last updated: 09 Jun 2026 13:54 UTC_
 <!-- LEADERBOARD_END -->
 
 ---
 
-## 🕒 Recent Matches
+## 📋 Recent Matches
 
 <!-- RECENT_MATCHES_START -->
-_No matches recorded yet._
+| Match | Event | Date | Winner | Ratings |
+|-------|-------|------|--------|----------|
+| M00018 | Play eSailing | 2026-06-09 | 🏆 **Jerseytbw** def. Corner | Corner (-4.77) vs Jerseytbw (+4.77) |
+| M00017 | Play eSailing | 2026-06-09 | 🏆 **Jerseytbw** def. Corner | Corner (-8.0) vs Jerseytbw (+8.0) |
 <!-- RECENT_MATCHES_END -->
 
 ---
 
-## How to use
+## 📊 Disputes
 
-- **Add a player** — open an issue using the [Add Player]( https://github.com/ToddWatkinsDev/Play-eSailing-Match-Racing-ELO/issues/new?template=add-player.yml) template
-- **Record a match** — open an issue using the [Record Match](https://github.com/ToddWatkinsDev/Play-eSailing-Match-Racing-ELO/issues/new?template=record-match.yml) template
-- Ratings update automatically within ~2 minutes of submission
-
-## Rating system
-
-- Starting rating: **1500**
-- K-factor: **32** (provisional, first 10 matches) → **20** (established)
-- Formula: standard Elo with pairwise 1v1 match racing results
+| DisputeID | Match | Status |
+|-----------|-------|--------|
+| _No disputes yet_ | — | — |
