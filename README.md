@@ -19,11 +19,12 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 | 🥇 | Willman | **1617** | 1617 | 1500 |
 | 🥈 | Booshify | **1557** | 1580 | 1492 |
 | 🥉 | Geobro | **1546** | 1557 | 1458 |
-| 4 | Jerseytbw | **1523** | 1540 | 1500 |
+| 4 | Jerseytbw | **1544** | 1544 | 1500 |
 | 5 | Jakob | **1504** | 1542 | 1500 |
-| 6 | Endourx | **1446** | 1508 | 1437 |
-| 7 | MudCreek | **1412** | 1500 | 1412 |
-| 8 | Corner | **1395** | 1500 | 1395 |
+| 6 | Liam Dimock | **1479** | 1488 | 1479 |
+| 7 | Endourx | **1446** | 1508 | 1437 |
+| 8 | MudCreek | **1412** | 1500 | 1412 |
+| 9 | Corner | **1395** | 1500 | 1395 |
 
 _Last updated: 09 Jun 2026 13:41 UTC_
 <!-- LEADERBOARD_END -->
@@ -35,8 +36,8 @@ _Last updated: 09 Jun 2026 13:41 UTC_
 <!-- RECENT_MATCHES_START -->
 | Match | Event | Date | Winner | Ratings |
 |-------|-------|------|--------|----------|
-| M00076 | Summer Match Racing | 2026-05-11 | 🏆 **Willman** def. Endourx | Willman (+6) vs Endourx (-6) |
-| M00075 | Summer Match Racing | 2026-05-11 | 🏆 **Willman** def. Endourx | Willman (+6) vs Endourx (-6) |
+| M00078 | Summer Match Race | 2026-05-11 | 🏆 **Jerseytbw** def. Liam Dimock | Liam Dimock (-9) vs Jerseytbw (+9) |
+| M00077 | Summer Match Race | 2026-05-11 | 🏆 **Jerseytbw** def. Liam Dimock | Liam Dimock (-12) vs Jerseytbw (+12) |
 <!-- RECENT_MATCHES_END -->
 
 ---
