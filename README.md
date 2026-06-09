@@ -21,9 +21,9 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 | 🥉 | Jerseytbw | **1540** | 1540 | 1500 |
 | 4 | Geobro | **1529** | 1529 | 1458 |
 | 5 | Jakob | **1521** | 1542 | 1500 |
-| 6 | MudCreek | **1444** | 1500 | 1444 |
-| 7 | Endourx | **1437** | 1508 | 1437 |
-| 8 | Corner | **1425** | 1500 | 1425 |
+| 6 | Endourx | **1457** | 1508 | 1437 |
+| 7 | Corner | **1425** | 1500 | 1425 |
+| 8 | MudCreek | **1424** | 1500 | 1424 |
 
 _Last updated: 09 Jun 2026 13:31 UTC_
 <!-- LEADERBOARD_END -->
@@ -35,8 +35,8 @@ _Last updated: 09 Jun 2026 13:31 UTC_
 <!-- RECENT_MATCHES_START -->
 | Match | Event | Date | Winner | Ratings |
 |-------|-------|------|--------|----------|
-| M00054 | Match Race Test Event | 2026-03-16 | 🏆 **Geobro** def. Booshify | Booshify (-11) vs Geobro (+11) |
-| M00053 | Match Race Test Event | 2026-03-16 | 🏆 **Geobro** def. Booshify | Booshify (-12) vs Geobro (+12) |
+| M00056 | Match Race Test Event | 2026-03-16 | 🏆 **Endourx** def. MudCreek | Endourx (+10) vs MudCreek (-10) |
+| M00055 | Match Race Test Event | 2026-03-16 | 🏆 **Endourx** def. MudCreek | Endourx (+10) vs MudCreek (-10) |
 <!-- RECENT_MATCHES_END -->
 
 ---
