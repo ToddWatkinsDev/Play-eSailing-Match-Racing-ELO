@@ -19,14 +19,15 @@ body:
       placeholder: e.g. 67890 or SR67890
     validations:
       required: true
-  - type: dropdown
-    id: winner
+  - type: input
+    id: score
     attributes:
-      label: Winner
-      description: Which sailor won the match?
-      options:
-        - Sailor A
-        - Sailor B
+      label: Score (Sailor A - Sailor B)
+      description: |
+        Enter the final score as A-B. Each point = one race.
+        e.g. 2-1 = three races, 2-0 = two races, 5-1 = six races.
+        The sailor with the higher score wins.
+      placeholder: e.g. 2-1
     validations:
       required: true
   - type: input
