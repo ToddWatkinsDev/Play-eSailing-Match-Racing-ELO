@@ -18,14 +18,14 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 |------|--------|--------|---------|--------|
 | 🥇 | Willman | **1568** | 1568 | 1500 |
 | 🥈 | Booshify | **1560** | 1560 | 1492 |
-| 🥉 | Jakob | **1527** | 1542 | 1500 |
+| 🥉 | Jakob | **1541** | 1542 | 1500 |
 | 4 | Geobro | **1506** | 1506 | 1458 |
 | 5 | Jerseytbw | **1502** | 1540 | 1500 |
 | 6 | Endourx | **1454** | 1508 | 1454 |
 | 7 | MudCreek | **1444** | 1500 | 1444 |
-| 8 | Corner | **1439** | 1500 | 1439 |
+| 8 | Corner | **1425** | 1500 | 1425 |
 
-_Last updated: 09 Jun 2026 13:27 UTC_
+_Last updated: 09 Jun 2026 13:28 UTC_
 <!-- LEADERBOARD_END -->
 
 ---
@@ -35,8 +35,8 @@ _Last updated: 09 Jun 2026 13:27 UTC_
 <!-- RECENT_MATCHES_START -->
 | Match | Event | Date | Winner | Ratings |
 |-------|-------|------|--------|----------|
-| M00043 | Match Race Test Event | 2026-03-09 | 🏆 **Geobro** def. MudCreek | Geobro (+9) vs MudCreek (-9) |
-| M00042 | Match Race Test Event | 2026-03-09 | 🏆 **Geobro** def. MudCreek | Geobro (+9) vs MudCreek (-9) |
+| M00045 | Match Race Test Event | 2026-03-19 | 🏆 **Jakob** def. Corner | Jakob (+7) vs Corner (-7) |
+| M00044 | Match Race Test Event | 2026-03-19 | 🏆 **Jakob** def. Corner | Jakob (+8) vs Corner (-8) |
 <!-- RECENT_MATCHES_END -->
 
 ---
