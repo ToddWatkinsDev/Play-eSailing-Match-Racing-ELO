@@ -16,16 +16,16 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 <!-- LEADERBOARD_START -->
 | Rank | Sailor | Rating | Highest | Lowest |
 |------|--------|--------|---------|--------|
-| 🥇 | Willman | **1552** | 1552 | 1500 |
-| 🥈 | Booshify | **1551** | 1551 | 1492 |
+| 🥇 | Booshify | **1560** | 1560 | 1492 |
+| 🥈 | Willman | **1552** | 1552 | 1500 |
 | 🥉 | Jakob | **1521** | 1542 | 1500 |
-| 4 | Jerseytbw | **1511** | 1540 | 1500 |
+| 4 | Jerseytbw | **1502** | 1540 | 1500 |
 | 5 | Geobro | **1479** | 1500 | 1458 |
 | 6 | MudCreek | **1478** | 1500 | 1458 |
 | 7 | Endourx | **1459** | 1508 | 1459 |
 | 8 | Corner | **1449** | 1500 | 1449 |
 
-_Last updated: 09 Jun 2026 13:07 UTC_
+_Last updated: 09 Jun 2026 13:09 UTC_
 <!-- LEADERBOARD_END -->
 
 ---
@@ -35,8 +35,8 @@ _Last updated: 09 Jun 2026 13:07 UTC_
 <!-- RECENT_MATCHES_START -->
 | Match | Event | Date | Winner | Ratings |
 |-------|-------|------|--------|----------|
+| M00019 | Match Race Test Event | 2026-03-16 | 🏆 **Booshify** def. Jerseytbw | Booshify (+9) vs Jerseytbw (-9) |
 | M00018 | Match Race Test Event | 2026-03-16 | 🏆 **Booshify** def. Jerseytbw | Booshify (+9) vs Jerseytbw (-9) |
-| M00039 | Play eSailing | 2026-06-09 | 🏆 **Willman** def. Jerseytbw | Jerseytbw (-10) vs Willman (+10) |
 <!-- RECENT_MATCHES_END -->
 
 ---
