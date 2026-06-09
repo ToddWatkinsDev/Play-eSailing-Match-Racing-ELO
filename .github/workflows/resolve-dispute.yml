@@ -8,7 +8,7 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
-  resolve:
+  resolve-dispute:
     if: github.event.label.name == 'resolve-dispute'
     runs-on: ubuntu-latest
 
@@ -17,10 +17,12 @@ jobs:
       issues: write
 
     steps:
-      - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5.6.0
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
@@ -33,16 +35,19 @@ jobs:
       - name: Update README leaderboard
         run: python .github/scripts/update_readme.py
 
-      - name: Commit all changes
+      - name: Commit and push with retry
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add ELO_Database.csv Match_History.csv Disputes.csv README.md
-          git pull --rebase origin main
-          git commit -m "Resolve dispute #${{ github.event.issue.number }}" || echo "No changes to commit"
-          git push
+          git add ELO_Database.csv Match_History.csv README.md Disputes.csv
+          git commit -m "Resolve dispute from issue #${{ github.event.issue.number }}" || { echo "Nothing to commit"; exit 0; }
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && break
+            echo "Push attempt $i failed, retrying..."
+            sleep 3
+          done
 
       - name: Close issue
         uses: peter-evans/close-issue@v3
         with:
-          comment: "✅ Dispute resolved. Ratings and leaderboard updated."
+          comment: "\u2705 Dispute resolved and records updated."
