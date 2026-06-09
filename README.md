@@ -17,15 +17,15 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 | Rank | Sailor | Rating | Highest | Lowest |
 |------|--------|--------|---------|--------|
 | 🥇 | Willman | **1571** | 1571 | 1500 |
-| 🥈 | Booshify | **1546** | 1580 | 1492 |
+| 🥈 | Booshify | **1559** | 1580 | 1492 |
 | 🥉 | Jerseytbw | **1540** | 1540 | 1500 |
 | 4 | Geobro | **1529** | 1529 | 1458 |
 | 5 | Jakob | **1521** | 1542 | 1500 |
 | 6 | Endourx | **1474** | 1508 | 1437 |
-| 7 | MudCreek | **1424** | 1500 | 1424 |
+| 7 | MudCreek | **1412** | 1500 | 1412 |
 | 8 | Corner | **1395** | 1500 | 1395 |
 
-_Last updated: 09 Jun 2026 13:32 UTC_
+_Last updated: 09 Jun 2026 13:33 UTC_
 <!-- LEADERBOARD_END -->
 
 ---
@@ -35,8 +35,8 @@ _Last updated: 09 Jun 2026 13:32 UTC_
 <!-- RECENT_MATCHES_START -->
 | Match | Event | Date | Winner | Ratings |
 |-------|-------|------|--------|----------|
-| M00060 | Match Race Test Event | 2026-03-16 | 🏆 **Endourx** def. Corner | Corner (-8) vs Endourx (+8) |
-| M00059 | Match Race Test Event | 2026-03-16 | 🏆 **Endourx** def. Corner | Corner (-9) vs Endourx (+9) |
+| M00062 | Match Race Test Event | 2026-03-16 | 🏆 **Booshify** def. MudCreek | MudCreek (-6) vs Booshify (+6) |
+| M00061 | Match Race Test Event | 2026-03-16 | 🏆 **Booshify** def. MudCreek | MudCreek (-7) vs Booshify (+7) |
 <!-- RECENT_MATCHES_END -->
 
 ---
