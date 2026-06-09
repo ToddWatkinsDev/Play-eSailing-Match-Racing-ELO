@@ -21,11 +21,11 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 | 🥉 | Jerseytbw | **1540** | 1540 | 1500 |
 | 4 | Geobro | **1529** | 1529 | 1458 |
 | 5 | Jakob | **1521** | 1542 | 1500 |
-| 6 | Endourx | **1457** | 1508 | 1437 |
+| 6 | Endourx | **1474** | 1508 | 1437 |
 | 7 | MudCreek | **1424** | 1500 | 1424 |
-| 8 | Corner | **1412** | 1500 | 1412 |
+| 8 | Corner | **1395** | 1500 | 1395 |
 
-_Last updated: 09 Jun 2026 13:31 UTC_
+_Last updated: 09 Jun 2026 13:32 UTC_
 <!-- LEADERBOARD_END -->
 
 ---
@@ -35,8 +35,8 @@ _Last updated: 09 Jun 2026 13:31 UTC_
 <!-- RECENT_MATCHES_START -->
 | Match | Event | Date | Winner | Ratings |
 |-------|-------|------|--------|----------|
-| M00058 | Match Race Test Event | 2026-03-16 | 🏆 **Willman** def. Corner | Corner (-6) vs Willman (+6) |
-| M00057 | Match Race Test Event | 2026-03-16 | 🏆 **Willman** def. Corner | Corner (-6) vs Willman (+6) |
+| M00060 | Match Race Test Event | 2026-03-16 | 🏆 **Endourx** def. Corner | Corner (-8) vs Endourx (+8) |
+| M00059 | Match Race Test Event | 2026-03-16 | 🏆 **Endourx** def. Corner | Corner (-9) vs Endourx (+9) |
 <!-- RECENT_MATCHES_END -->
 
 ---
