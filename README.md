@@ -17,15 +17,15 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 | Rank | Sailor | Rating | Highest | Lowest |
 |------|--------|--------|---------|--------|
 | 🥇 | Willman | **1606** | 1606 | 1500 |
-| 🥈 | Geobro | **1546** | 1557 | 1458 |
-| 🥉 | Booshify | **1541** | 1580 | 1492 |
+| 🥈 | Booshify | **1557** | 1580 | 1492 |
+| 🥉 | Geobro | **1546** | 1557 | 1458 |
 | 4 | Jerseytbw | **1523** | 1540 | 1500 |
 | 5 | Jakob | **1504** | 1542 | 1500 |
-| 6 | Endourx | **1474** | 1508 | 1437 |
+| 6 | Endourx | **1458** | 1508 | 1437 |
 | 7 | MudCreek | **1412** | 1500 | 1412 |
 | 8 | Corner | **1395** | 1500 | 1395 |
 
-_Last updated: 09 Jun 2026 13:39 UTC_
+_Last updated: 09 Jun 2026 13:40 UTC_
 <!-- LEADERBOARD_END -->
 
 ---
@@ -35,8 +35,8 @@ _Last updated: 09 Jun 2026 13:39 UTC_
 <!-- RECENT_MATCHES_START -->
 | Match | Event | Date | Winner | Ratings |
 |-------|-------|------|--------|----------|
-| M00072 | Summer Match Racing | 2026-05-11 | 🏆 **Willman** def. Booshify | Booshify (-9) vs Willman (+9) |
-| M00071 | Summer Match Racing | 2026-05-11 | 🏆 **Willman** def. Booshify | Booshify (-9) vs Willman (+9) |
+| M00074 | Summer Match Racing | 2026-05-11 | 🏆 **Booshify** def. Endourx | Endourx (-8) vs Booshify (+8) |
+| M00073 | Summer Match Racing | 2026-05-11 | 🏆 **Booshify** def. Endourx | Endourx (-8) vs Booshify (+8) |
 <!-- RECENT_MATCHES_END -->
 
 ---
