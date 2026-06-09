@@ -16,16 +16,16 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 <!-- LEADERBOARD_START -->
 | Rank | Sailor | Rating | Highest | Lowest |
 |------|--------|--------|---------|--------|
-| 🥇 | Booshify | **1569** | 1580 | 1492 |
-| 🥈 | Willman | **1559** | 1568 | 1500 |
+| 🥇 | Willman | **1559** | 1568 | 1500 |
+| 🥈 | Booshify | **1546** | 1580 | 1492 |
 | 🥉 | Jerseytbw | **1540** | 1540 | 1500 |
-| 4 | Jakob | **1521** | 1542 | 1500 |
-| 5 | Geobro | **1506** | 1506 | 1458 |
+| 4 | Geobro | **1529** | 1529 | 1458 |
+| 5 | Jakob | **1521** | 1542 | 1500 |
 | 6 | MudCreek | **1444** | 1500 | 1444 |
 | 7 | Endourx | **1437** | 1508 | 1437 |
 | 8 | Corner | **1425** | 1500 | 1425 |
 
-_Last updated: 09 Jun 2026 13:30 UTC_
+_Last updated: 09 Jun 2026 13:31 UTC_
 <!-- LEADERBOARD_END -->
 
 ---
@@ -35,8 +35,8 @@ _Last updated: 09 Jun 2026 13:30 UTC_
 <!-- RECENT_MATCHES_START -->
 | Match | Event | Date | Winner | Ratings |
 |-------|-------|------|--------|----------|
-| M00052 | Match Race Test Event | 2026-06-09 | 🏆 **Jerseytbw** def. Jakob | Jerseytbw (+10) vs Jakob (-10) |
-| M00051 | Match Race Test Event | 2026-06-09 | 🏆 **Jerseytbw** def. Jakob | Jerseytbw (+11) vs Jakob (-11) |
+| M00054 | Match Race Test Event | 2026-03-16 | 🏆 **Geobro** def. Booshify | Booshify (-11) vs Geobro (+11) |
+| M00053 | Match Race Test Event | 2026-03-16 | 🏆 **Geobro** def. Booshify | Booshify (-12) vs Geobro (+12) |
 <!-- RECENT_MATCHES_END -->
 
 ---
