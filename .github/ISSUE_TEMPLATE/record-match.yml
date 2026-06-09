@@ -1,0 +1,46 @@
+name: Record Match
+description: Submit a completed match race result
+title: "[MATCH] "
+labels: ["record-match"]
+body:
+  - type: input
+    id: sailor_a_id
+    attributes:
+      label: Sailor A SailRanks ID
+      description: SailRanks ID of the first sailor
+      placeholder: e.g. 12345 or SR12345
+    validations:
+      required: true
+  - type: input
+    id: sailor_b_id
+    attributes:
+      label: Sailor B SailRanks ID
+      description: SailRanks ID of the second sailor
+      placeholder: e.g. 67890 or SR67890
+    validations:
+      required: true
+  - type: dropdown
+    id: winner
+    attributes:
+      label: Winner
+      description: Which sailor won the match?
+      options:
+        - Sailor A
+        - Sailor B
+    validations:
+      required: true
+  - type: input
+    id: event
+    attributes:
+      label: Event Name
+      placeholder: e.g. GB eSailing Match Race League - Round 1
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Date
+      description: Date the match was sailed (YYYY-MM-DD)
+      placeholder: e.g. 2026-06-09
+    validations:
+      required: true

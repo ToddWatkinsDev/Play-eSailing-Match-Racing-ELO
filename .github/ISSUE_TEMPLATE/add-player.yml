@@ -1,0 +1,20 @@
+name: Add Player
+description: Register a new sailor to the ELO database
+title: "[ADD PLAYER] "
+labels: ["add-player"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Sailor Name
+      placeholder: e.g. Tom Smith
+    validations:
+      required: true
+  - type: input
+    id: sailranks_id
+    attributes:
+      label: SailRanks ID
+      description: Your SailRanks ID number (numbers only, or with SR prefix)
+      placeholder: e.g. 12345 or SR12345
+    validations:
+      required: true
