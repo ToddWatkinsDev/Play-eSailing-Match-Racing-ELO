@@ -46,7 +46,7 @@ def load_players():
         reader = csv.DictReader(f)
         for row in reader:
             if row["SailRanksID"]:
-                players[row["SailRanksID"]] = row
+                players[row["SailRanksID"].strip()] = row
     return players
 
 
@@ -66,27 +66,36 @@ def k_factor(player_row: dict) -> float:
     return 32.0 if not player_row.get("Current", "").strip() else 20.0
 
 
-def update_tracking(player_row: dict, new_rating: float, now: datetime):
-    lowest = float(player_row["Lowest"]) if player_row["Lowest"] else new_rating
-    highest = float(player_row["Highest"]) if player_row["Highest"] else new_rating
+def update_tracking(player_row: dict, new_rating: float):
+    lowest = float(player_row["Lowest"]) if player_row["Lowest"].strip() else new_rating
+    highest = float(player_row["Highest"]) if player_row["Highest"].strip() else new_rating
     player_row["Lowest"] = round(min(lowest, new_rating), 2)
     player_row["Highest"] = round(max(highest, new_rating), 2)
     player_row["Current"] = round(new_rating, 2)
-    pm_high = float(player_row["PastMonthHigh"]) if player_row["PastMonthHigh"] else new_rating
-    pm_low = float(player_row["PastMonthLow"]) if player_row["PastMonthLow"] else new_rating
+    pm_high = float(player_row["PastMonthHigh"]) if player_row["PastMonthHigh"].strip() else new_rating
+    pm_low = float(player_row["PastMonthLow"]) if player_row["PastMonthLow"].strip() else new_rating
     player_row["PastMonthHigh"] = round(max(pm_high, new_rating), 2)
     player_row["PastMonthLow"] = round(min(pm_low, new_rating), 2)
 
 
 def extract_field(label: str, text: str) -> str | None:
-    pattern = rf"### {re.escape(label)}[\r\n]+([\r\n]+)?(.+?)(?=[\r\n]|$)"
-    match = re.search(pattern, text)
+    """
+    Extract a field value from a GitHub issue form body.
+    GitHub renders fields as:
+        ### Field Label\r\n\r\nValue
+    The value may span multiple lines for textareas.
+    For single-value fields (inputs, dropdowns) we take the first non-blank line.
+    """
+    pattern = rf"### {re.escape(label)}\s*[\r\n]+(.*?)(?=\s*###|\Z)"
+    match = re.search(pattern, text, re.DOTALL)
     if not match:
         return None
-    value = match.group(2).strip()
-    if value.lower() == "_no response_" or value == "":
-        return None
-    return value
+    # Take first non-blank line as the value for inputs/dropdowns
+    for line in match.group(1).splitlines():
+        stripped = line.strip()
+        if stripped and stripped.lower() != "_no response_":
+            return stripped
+    return None
 
 
 # --- Parse issue body ---
@@ -103,9 +112,10 @@ winner_raw = extract_field("Winner", body)
 event = extract_field("Event Name", body)
 date_str = extract_field("Date", body)
 
+print(f"Parsed: id_a={id_a_raw!r} id_b={id_b_raw!r} winner={winner_raw!r} event={event!r} date={date_str!r}")
+
 if not all([id_a_raw, id_b_raw, winner_raw, event, date_str]):
-    print(f"ERROR: Could not parse issue body.")
-    print(f"  id_a={id_a_raw!r} id_b={id_b_raw!r} winner={winner_raw!r} event={event!r} date={date_str!r}")
+    print("ERROR: Could not parse all required fields from issue body.")
     sys.exit(1)
 
 try:
@@ -121,12 +131,12 @@ if winner_normalised == "sailor a":
 elif winner_normalised == "sailor b":
     score_a = 0.0
 else:
-    print(f"ERROR: Unrecognised winner value '{winner_raw}'.")
+    print(f"ERROR: Unrecognised winner value '{winner_raw}'. Expected 'Sailor A' or 'Sailor B'.")
     sys.exit(1)
 
 winner_id = id_a if score_a == 1.0 else id_b
 
-# --- Load players and validate both exist ---
+# --- Load players ---
 players = load_players()
 
 if id_a not in players:
@@ -149,9 +159,8 @@ expected_b = 1 - expected_a
 
 rating_a_post, rating_b_post = update_elo(rating_a_pre, rating_b_pre, score_a, k)
 
-now = datetime.utcnow()
-update_tracking(row_a, rating_a_post, now)
-update_tracking(row_b, rating_b_post, now)
+update_tracking(row_a, rating_a_post)
+update_tracking(row_b, rating_b_post)
 
 save_players(players)
 
@@ -179,5 +188,5 @@ with MATCH_HISTORY_PATH.open("a", newline="", encoding="utf-8") as f:
     writer.writerow(match_row)
 
 print(f"SUCCESS: Match {match_id} recorded.")
-print(f"  {id_a}: {round(rating_a_pre,2)} -> {round(rating_a_post,2)}")
-print(f"  {id_b}: {round(rating_b_pre,2)} -> {round(rating_b_post,2)}")
+print(f"  {id_a} ({row_a['Name']}): {round(rating_a_pre,2)} -> {round(rating_a_post,2)}")
+print(f"  {id_b} ({row_b['Name']}): {round(rating_b_pre,2)} -> {round(rating_b_post,2)}")

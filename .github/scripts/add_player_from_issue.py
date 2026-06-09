@@ -7,25 +7,27 @@ from ELO_Calculator import add_player
 
 body = os.environ.get("ISSUE_BODY", "")
 
-# Debug: always print the raw body so failures are easy to diagnose
 print("--- RAW ISSUE BODY ---")
 print(repr(body))
 print("--- END BODY ---")
 
-# GitHub forms use CRLF and insert a blank line between the heading and value
-# Pattern: ### Field Name\r\n\r\nValue  (or \n\n)
+
 def extract_field(label: str, text: str) -> str | None:
-    pattern = rf"### {re.escape(label)}[\r\n]+([\r\n]+)?(.+?)(?=[\r\n]|$)"
-    match = re.search(pattern, text)
+    pattern = rf"### {re.escape(label)}\s*[\r\n]+(.*?)(?=\s*###|\Z)"
+    match = re.search(pattern, text, re.DOTALL)
     if not match:
         return None
-    value = match.group(2).strip()
-    if value.lower() == "_no response_" or value == "":
-        return None
-    return value
+    for line in match.group(1).splitlines():
+        stripped = line.strip()
+        if stripped and stripped.lower() != "_no response_":
+            return stripped
+    return None
+
 
 name = extract_field("Sailor Name", body)
 sailranks_id = extract_field("SailRanks ID", body)
+
+print(f"Parsed: name={name!r} sailranks_id={sailranks_id!r}")
 
 if not name or not sailranks_id:
     print(f"ERROR: Could not parse issue body. name={name!r} sailranks_id={sailranks_id!r}")

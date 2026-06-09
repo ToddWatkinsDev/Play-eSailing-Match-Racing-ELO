@@ -17,7 +17,7 @@ def load_players() -> dict:
         return players
     with DB_PATH.open("r", newline="", encoding="utf-8") as f:
         for row in csv.DictReader(f):
-            if row["SailRanksID"] and row["Current"]:
+            if row["SailRanksID"] and row["Current"].strip():
                 players[row["SailRanksID"]] = row
     return players
 
@@ -29,8 +29,14 @@ def load_history() -> list:
         return list(csv.DictReader(f))
 
 
+MEDALS = ["\U0001f947", "\U0001f948", "\U0001f949"]  # 🥇 🥈 🥉
+
+
 def medal(rank: int) -> str:
-    return ["🥇", "🥈", "🥉"].get(rank - 1, f"{rank}")
+    # rank is 1-indexed; medals list is 0-indexed
+    if rank - 1 < len(MEDALS):
+        return MEDALS[rank - 1]
+    return str(rank)
 
 
 def build_leaderboard(players: dict) -> str:
@@ -49,14 +55,14 @@ def build_leaderboard(players: dict) -> str:
     ]
     for i, row in enumerate(ranked, 1):
         rating = float(row["Current"])
-        highest = float(row["Highest"]) if row["Highest"] else rating
-        lowest = float(row["Lowest"]) if row["Lowest"] else rating
+        highest = float(row["Highest"]) if row["Highest"].strip() else rating
+        lowest = float(row["Lowest"]) if row["Lowest"].strip() else rating
         lines.append(
             f"| {medal(i)} | {row['Name']} | **{rating:.0f}** | {highest:.0f} | {lowest:.0f} |"
         )
 
     updated = datetime.utcnow().strftime("%d %b %Y %H:%M UTC")
-    lines.append(f"")
+    lines.append("")
     lines.append(f"_Last updated: {updated}_")
     return "\n".join(lines)
 
@@ -65,7 +71,7 @@ def build_recent_matches(history: list, players: dict) -> str:
     if not history:
         return "_No matches recorded yet._"
 
-    recent = history[-RECENT_N:]
+    recent = list(history[-RECENT_N:])
     recent.reverse()  # most recent first
 
     def name(sid: str) -> str:
@@ -76,8 +82,8 @@ def build_recent_matches(history: list, players: dict) -> str:
         return f"+{d:.0f}" if d >= 0 else f"{d:.0f}"
 
     lines = [
-        "| Match | Event | Date | Winner | Result |",
-        "|-------|-------|------|--------|--------|",
+        "| Match | Event | Date | Winner | Ratings |",
+        "|-------|-------|------|--------|----------|",
     ]
     for row in recent:
         a = name(row["SailorA_ID"])
@@ -86,11 +92,10 @@ def build_recent_matches(history: list, players: dict) -> str:
         loser = b if row["Winner_ID"] == row["SailorA_ID"] else a
         da = delta(row["RatingA_Pre"], row["RatingA_Post"])
         db = delta(row["RatingB_Pre"], row["RatingB_Post"])
-        a_part = f"{a} ({da})"
-        b_part = f"{b} ({db})"
-        result = f"🏆 **{winner}** def. {loser}"
+        result = f"\U0001f3c6 **{winner}** def. {loser}"
+        ratings = f"{a} ({da}) vs {b} ({db})"
         lines.append(
-            f"| {row['MatchID']} | {row['Event']} | {row['Date']} | {result} | {a_part} vs {b_part} |"
+            f"| {row['MatchID']} | {row['Event']} | {row['Date']} | {result} | {ratings} |"
         )
 
     return "\n".join(lines)
