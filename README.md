@@ -19,10 +19,10 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 | 🥇 | Willman | **1568** | 1568 | 1500 |
 | 🥈 | Booshify | **1560** | 1560 | 1492 |
 | 🥉 | Jakob | **1541** | 1542 | 1500 |
-| 4 | Geobro | **1506** | 1506 | 1458 |
-| 5 | Jerseytbw | **1502** | 1540 | 1500 |
-| 6 | Endourx | **1454** | 1508 | 1454 |
-| 7 | MudCreek | **1444** | 1500 | 1444 |
+| 4 | Jerseytbw | **1519** | 1540 | 1500 |
+| 5 | Geobro | **1506** | 1506 | 1458 |
+| 6 | MudCreek | **1444** | 1500 | 1444 |
+| 7 | Endourx | **1437** | 1508 | 1437 |
 | 8 | Corner | **1425** | 1500 | 1425 |
 
 _Last updated: 09 Jun 2026 13:28 UTC_
@@ -35,8 +35,8 @@ _Last updated: 09 Jun 2026 13:28 UTC_
 <!-- RECENT_MATCHES_START -->
 | Match | Event | Date | Winner | Ratings |
 |-------|-------|------|--------|----------|
-| M00045 | Match Race Test Event | 2026-03-19 | 🏆 **Jakob** def. Corner | Jakob (+7) vs Corner (-7) |
-| M00044 | Match Race Test Event | 2026-03-19 | 🏆 **Jakob** def. Corner | Jakob (+8) vs Corner (-8) |
+| M00047 | Match Race Test Event | 2026-03-16 | 🏆 **Jerseytbw** def. Endourx | Jerseytbw (+8) vs Endourx (-8) |
+| M00046 | Match Race Test Event | 2026-03-16 | 🏆 **Jerseytbw** def. Endourx | Jerseytbw (+9) vs Endourx (-9) |
 <!-- RECENT_MATCHES_END -->
 
 ---
