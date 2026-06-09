@@ -1,0 +1,41 @@
+name: Dispute Match Result
+description: Raise a dispute against a recorded match result
+title: "[DISPUTE] "
+labels: ["dispute"]
+body:
+  - type: input
+    id: match_id
+    attributes:
+      label: Match ID
+      description: The Match ID from Match_History.csv (e.g. M00006)
+      placeholder: e.g. M00006
+    validations:
+      required: true
+  - type: input
+    id: disputed_by
+    attributes:
+      label: Your SailRanks ID
+      description: Your SailRanks ID — must be one of the two sailors in the match
+      placeholder: e.g. 12345 or SR12345
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: Reason for Dispute
+      options:
+        - Wrong winner recorded
+        - Technical issue / disconnection
+        - Match was not sailed
+        - Rule infringement
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Provide any supporting information, screenshots, or context
+      placeholder: Describe what happened...
+    validations:
+      required: true

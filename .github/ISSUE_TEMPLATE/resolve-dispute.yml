@@ -1,0 +1,48 @@
+name: Resolve Dispute
+description: Admin only — resolve or dismiss a dispute
+title: "[RESOLVE] "
+labels: ["resolve-dispute"]
+body:
+  - type: input
+    id: dispute_issue
+    attributes:
+      label: Dispute Issue Number
+      description: The GitHub issue number of the dispute being resolved
+      placeholder: e.g. 7
+    validations:
+      required: true
+  - type: input
+    id: match_id
+    attributes:
+      label: Match ID
+      description: The Match ID being resolved (e.g. M00006)
+      placeholder: e.g. M00006
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What should happen to this match?
+      options:
+        - Uphold — revert match and remove ratings change
+        - Uphold — revert match and re-record with corrected winner
+        - Dismiss — result stands
+    validations:
+      required: true
+  - type: input
+    id: corrected_winner
+    attributes:
+      label: Corrected Winner SailRanks ID
+      description: Only required if outcome is "re-record with corrected winner"
+      placeholder: e.g. 12345
+    validations:
+      required: false
+  - type: input
+    id: admin_id
+    attributes:
+      label: Admin SailRanks ID
+      description: Your SailRanks ID as the resolving admin
+      placeholder: e.g. 99999
+    validations:
+      required: true
