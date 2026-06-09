@@ -16,16 +16,16 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 <!-- LEADERBOARD_START -->
 | Rank | Sailor | Rating | Highest | Lowest |
 |------|--------|--------|---------|--------|
-| 🥇 | Willman | **1588** | 1588 | 1500 |
-| 🥈 | Booshify | **1559** | 1580 | 1492 |
-| 🥉 | Geobro | **1546** | 1557 | 1458 |
+| 🥇 | Willman | **1606** | 1606 | 1500 |
+| 🥈 | Geobro | **1546** | 1557 | 1458 |
+| 🥉 | Booshify | **1541** | 1580 | 1492 |
 | 4 | Jerseytbw | **1523** | 1540 | 1500 |
 | 5 | Jakob | **1504** | 1542 | 1500 |
 | 6 | Endourx | **1474** | 1508 | 1437 |
 | 7 | MudCreek | **1412** | 1500 | 1412 |
 | 8 | Corner | **1395** | 1500 | 1395 |
 
-_Last updated: 09 Jun 2026 13:38 UTC_
+_Last updated: 09 Jun 2026 13:39 UTC_
 <!-- LEADERBOARD_END -->
 
 ---
@@ -35,8 +35,8 @@ _Last updated: 09 Jun 2026 13:38 UTC_
 <!-- RECENT_MATCHES_START -->
 | Match | Event | Date | Winner | Ratings |
 |-------|-------|------|--------|----------|
-| M00070 | Summer Match Racing | 2026-05-11 | 🏆 **Jerseytbw** def. Geobro | Jerseytbw (+11) vs Geobro (-11) |
-| M00069 | Summer Match Racing | 2026-05-11 | 🏆 **Geobro** def. Jerseytbw | Jerseytbw (-9) vs Geobro (+9) |
+| M00072 | Summer Match Racing | 2026-05-11 | 🏆 **Willman** def. Booshify | Booshify (-9) vs Willman (+9) |
+| M00071 | Summer Match Racing | 2026-05-11 | 🏆 **Willman** def. Booshify | Booshify (-9) vs Willman (+9) |
 <!-- RECENT_MATCHES_END -->
 
 ---
