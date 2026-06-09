@@ -20,10 +20,10 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 | 🥈 | Willman | **1552** | 1552 | 1500 |
 | 🥉 | Jakob | **1527** | 1542 | 1500 |
 | 4 | Jerseytbw | **1502** | 1540 | 1500 |
-| 5 | Geobro | **1479** | 1500 | 1458 |
+| 5 | Geobro | **1488** | 1500 | 1458 |
 | 6 | MudCreek | **1478** | 1500 | 1458 |
 | 7 | Endourx | **1454** | 1508 | 1454 |
-| 8 | Corner | **1449** | 1500 | 1449 |
+| 8 | Corner | **1439** | 1500 | 1439 |
 
 _Last updated: 09 Jun 2026 13:12 UTC_
 <!-- LEADERBOARD_END -->
@@ -35,8 +35,8 @@ _Last updated: 09 Jun 2026 13:12 UTC_
 <!-- RECENT_MATCHES_START -->
 | Match | Event | Date | Winner | Ratings |
 |-------|-------|------|--------|----------|
+| M00023 | Match Race Test Event | 2026-03-16 | 🏆 **Geobro** def. Corner | Geobro (+9) vs Corner (-9) |
 | M00022 | Match Race Test Event | 2026-03-16 | 🏆 **Jakob** def. Endourx | Jakob (+8) vs Endourx (-8) |
-| M00021 | Match Race Test Event | 2026-03-16 | 🏆 **Jakob** def. Endourx | Jakob (+9) vs Endourx (-9) |
 <!-- RECENT_MATCHES_END -->
 
 ---
