@@ -5,7 +5,7 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 ## How to Use
 
 - **Add a player** — open an issue using the *Register New Player* template and apply the `add-player` label
-- **Record a match** — open an issue using the *Record Match Result* template and apply the `record-match` label
+- **Record a match** — open an issue using the *Record Match Result* template and apply the `record-match` label, for non event races, event name should be set to frendly
 - **Dispute a result** — open an issue using the *Dispute Match Result* template
 - **Resolve a dispute** — admins open an issue using the *Resolve Dispute* template
 
