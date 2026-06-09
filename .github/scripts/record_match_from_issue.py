@@ -15,7 +15,7 @@ from ELO_Calculator import (
 )
 
 STARTING_ELO = 1500.0
-MATCH_HISTORY_PATH = Path("Match-History.csv")
+MATCH_HISTORY_PATH = Path("Match_History.csv")
 MATCH_HISTORY_FIELDS = [
     "MatchID",
     "Event",
@@ -69,8 +69,6 @@ def k_factor(player_row: dict) -> float:
 
 def update_tracking(player_row: dict, new_rating: float, now: datetime):
     """Update Lowest, Highest, PastMonth fields and Current."""
-    current_month = now.strftime("%Y-%m")
-
     lowest = float(player_row["Lowest"]) if player_row["Lowest"] else new_rating
     highest = float(player_row["Highest"]) if player_row["Highest"] else new_rating
 
@@ -78,7 +76,6 @@ def update_tracking(player_row: dict, new_rating: float, now: datetime):
     player_row["Highest"] = round(max(highest, new_rating), 2)
     player_row["Current"] = round(new_rating, 2)
 
-    # PastMonth fields store the high/low within the current calendar month
     pm_high = float(player_row["PastMonthHigh"]) if player_row["PastMonthHigh"] else new_rating
     pm_low = float(player_row["PastMonthLow"]) if player_row["PastMonthLow"] else new_rating
     player_row["PastMonthHigh"] = round(max(pm_high, new_rating), 2)
@@ -125,11 +122,11 @@ winner_id = id_a if score_a == 1.0 else id_b
 players = load_players()
 
 if id_a not in players:
-    print(f"ERROR: Sailor A (ID {id_a}) not found in ELO-Database.csv. Add them first.")
+    print(f"ERROR: Sailor A (ID {id_a}) not found in ELO_Database.csv. Add them first.")
     sys.exit(1)
 
 if id_b not in players:
-    print(f"ERROR: Sailor B (ID {id_b}) not found in ELO-Database.csv. Add them first.")
+    print(f"ERROR: Sailor B (ID {id_b}) not found in ELO_Database.csv. Add them first.")
     sys.exit(1)
 
 row_a = players[id_a]
@@ -140,7 +137,6 @@ rating_b_pre = get_or_init_elo(row_b)
 k_a = k_factor(row_a)
 k_b = k_factor(row_b)
 
-# Use average K for the pair
 k = (k_a + k_b) / 2
 
 expected_a = 1 / (1 + 10 ** ((rating_b_pre - rating_a_pre) / 400))

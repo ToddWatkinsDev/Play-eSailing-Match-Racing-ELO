@@ -2,7 +2,7 @@ import csv
 from pathlib import Path
 
 
-FILE_PATH = Path("ELO-Database.csv")
+FILE_PATH = Path("ELO_Database.csv")
 
 PLAYER_FIELDS = [
     "Name",
