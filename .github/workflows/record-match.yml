@@ -2,14 +2,14 @@ name: Record Match Result
 
 on:
   issues:
-    types: [opened]
+    types: [labeled]
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   record-match:
-    if: contains(github.event.issue.labels.*.name, 'record-match')
+    if: github.event.label.name == 'record-match'
     runs-on: ubuntu-latest
 
     permissions:
@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add ELO-Database.csv
+          git add ELO_Database.csv Match_History.csv
           git commit -m "Record match result from issue #${{ github.event.issue.number }}" || echo "No changes to commit"
           git push
 

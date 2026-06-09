@@ -63,54 +63,62 @@ def get_or_init_elo(player_row: dict) -> float:
 
 
 def k_factor(player_row: dict) -> float:
-    """K=32 for provisional (no Current rating yet), K=20 for established."""
     return 32.0 if not player_row.get("Current", "").strip() else 20.0
 
 
 def update_tracking(player_row: dict, new_rating: float, now: datetime):
-    """Update Lowest, Highest, PastMonth fields and Current."""
     lowest = float(player_row["Lowest"]) if player_row["Lowest"] else new_rating
     highest = float(player_row["Highest"]) if player_row["Highest"] else new_rating
-
     player_row["Lowest"] = round(min(lowest, new_rating), 2)
     player_row["Highest"] = round(max(highest, new_rating), 2)
     player_row["Current"] = round(new_rating, 2)
-
     pm_high = float(player_row["PastMonthHigh"]) if player_row["PastMonthHigh"] else new_rating
     pm_low = float(player_row["PastMonthLow"]) if player_row["PastMonthLow"] else new_rating
     player_row["PastMonthHigh"] = round(max(pm_high, new_rating), 2)
     player_row["PastMonthLow"] = round(min(pm_low, new_rating), 2)
 
 
+def extract_field(label: str, text: str) -> str | None:
+    pattern = rf"### {re.escape(label)}[\r\n]+([\r\n]+)?(.+?)(?=[\r\n]|$)"
+    match = re.search(pattern, text)
+    if not match:
+        return None
+    value = match.group(2).strip()
+    if value.lower() == "_no response_" or value == "":
+        return None
+    return value
+
+
 # --- Parse issue body ---
 body = os.environ.get("ISSUE_BODY", "")
 issue_number = os.environ.get("ISSUE_NUMBER", "0")
 
-a_id_match = re.search(r"### Sailor A SailRanks ID\s+([^\n]+)", body)
-b_id_match = re.search(r"### Sailor B SailRanks ID\s+([^\n]+)", body)
-winner_match = re.search(r"### Winner\s+([^\n]+)", body)
-event_match = re.search(r"### Event Name\s+([^\n]+)", body)
-date_match = re.search(r"### Date\s+([^\n]+)", body)
+print("--- RAW ISSUE BODY ---")
+print(repr(body))
+print("--- END BODY ---")
 
-if not all([a_id_match, b_id_match, winner_match, event_match, date_match]):
-    print("ERROR: Could not parse issue body.")
-    print(body)
+id_a_raw = extract_field("Sailor A SailRanks ID", body)
+id_b_raw = extract_field("Sailor B SailRanks ID", body)
+winner_raw = extract_field("Winner", body)
+event = extract_field("Event Name", body)
+date_str = extract_field("Date", body)
+
+if not all([id_a_raw, id_b_raw, winner_raw, event, date_str]):
+    print(f"ERROR: Could not parse issue body.")
+    print(f"  id_a={id_a_raw!r} id_b={id_b_raw!r} winner={winner_raw!r} event={event!r} date={date_str!r}")
     sys.exit(1)
 
 try:
-    id_a = clean_sailranks_id(a_id_match.group(1).strip())
-    id_b = clean_sailranks_id(b_id_match.group(1).strip())
+    id_a = clean_sailranks_id(id_a_raw)
+    id_b = clean_sailranks_id(id_b_raw)
 except ValueError as e:
     print(f"ERROR: {e}")
     sys.exit(1)
 
-winner_raw = winner_match.group(1).strip().lower()
-event = event_match.group(1).strip()
-date_str = date_match.group(1).strip()
-
-if winner_raw == "sailor a":
+winner_normalised = winner_raw.strip().lower()
+if winner_normalised == "sailor a":
     score_a = 1.0
-elif winner_raw == "sailor b":
+elif winner_normalised == "sailor b":
     score_a = 0.0
 else:
     print(f"ERROR: Unrecognised winner value '{winner_raw}'.")
@@ -134,10 +142,7 @@ row_b = players[id_b]
 
 rating_a_pre = get_or_init_elo(row_a)
 rating_b_pre = get_or_init_elo(row_b)
-k_a = k_factor(row_a)
-k_b = k_factor(row_b)
-
-k = (k_a + k_b) / 2
+k = (k_factor(row_a) + k_factor(row_b)) / 2
 
 expected_a = 1 / (1 + 10 ** ((rating_b_pre - rating_a_pre) / 400))
 expected_b = 1 - expected_a
