@@ -16,16 +16,16 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 <!-- LEADERBOARD_START -->
 | Rank | Sailor | Rating | Highest | Lowest |
 |------|--------|--------|---------|--------|
-| 🥇 | Jerseytbw | **1513** | 1513 | 1500 |
-| 🥈 | Booshify | **1502** | 1502 | 1492 |
-| 🥉 | Endourx | **1498** | 1508 | 1498 |
-| 4 | Corner | **1487** | 1500 | 1487 |
-| 5 | MudCreek | **1500** | 1500 | 1500 |
-| 6 | Jakob | **1500** | 1500 | 1500 |
-| 7 | Geobro | **1500** | 1500 | 1500 |
-| 8 | Willman | **1500** | 1500 | 1500 |
+| 🥇 | Willman | **1559.22** | 1559.22 | 1500.0 |
+| 🥈 | Booshify | **1542.85** | 1542.85 | 1492.0 |
+| 🥉 | Jakob | **1527.82** | 1549.52 | 1500.0 |
+| 4 | Jerseytbw | **1519.54** | 1540.46 | 1500.0 |
+| 5 | Geobro | **1470.61** | 1500.0 | 1450.48 |
+| 6 | MudCreek | **1472.56** | 1500.0 | 1453.2 |
+| 7 | Endourx | **1458.57** | 1508.0 | 1458.57 |
+| 8 | Corner | **1449.03** | 1500.0 | 1449.03 |
 
-_Last updated: 09 Jun 2026 13:54 UTC_
+_Last updated: 09 Jun 2026 13:58 UTC_
 <!-- LEADERBOARD_END -->
 
 ---
@@ -35,8 +35,8 @@ _Last updated: 09 Jun 2026 13:54 UTC_
 <!-- RECENT_MATCHES_START -->
 | Match | Event | Date | Winner | Ratings |
 |-------|-------|------|--------|----------|
-| M00018 | Play eSailing | 2026-06-09 | 🏆 **Jerseytbw** def. Corner | Corner (-4.77) vs Jerseytbw (+4.77) |
-| M00017 | Play eSailing | 2026-06-09 | 🏆 **Jerseytbw** def. Corner | Corner (-8.0) vs Jerseytbw (+8.0) |
+| M00039 | Play eSailing | 2026-06-09 | 🏆 **Willman** def. Jerseytbw | Jerseytbw (-9.64) vs Willman (+9.84) |
+| M00038 | Play eSailing | 2026-06-09 | 🏆 **Willman** def. Jerseytbw | Jerseytbw (-10.23) vs Willman (+10.23) |
 <!-- RECENT_MATCHES_END -->
 
 ---
