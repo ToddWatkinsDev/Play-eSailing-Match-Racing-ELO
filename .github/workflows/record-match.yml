@@ -30,12 +30,16 @@ jobs:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: python .github/scripts/record_match_from_issue.py
 
-      - name: Commit updated CSV
+      - name: Update README leaderboard
+        run: python .github/scripts/update_readme.py
+
+      - name: Commit updated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add ELO_Database.csv Match_History.csv
-          git commit -m "Record match result from issue #${{ github.event.issue.number }}" || echo "No changes to commit"
+          git add ELO_Database.csv Match_History.csv README.md
+          git pull --rebase origin main
+          git commit -m "Record match #${{ github.event.issue.number }} and update leaderboard" || echo "No changes to commit"
           git push
 
       - name: Close issue
