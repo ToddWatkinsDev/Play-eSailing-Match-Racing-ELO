@@ -18,15 +18,16 @@ An automated ELO rating system for Play eSailing match racing, powered by GitHub
 |------|--------|--------|---------|--------|
 | 🥇 | Willman | **1594** | 1617 | 1500 |
 | 🥈 | Geobro | **1582** | 1582 | 1458 |
-| 🥉 | Jerseytbw | **1554** | 1582 | 1500 |
+| 🥉 | Jerseytbw | **1567** | 1582 | 1500 |
 | 4 | Booshify | **1539** | 1580 | 1492 |
 | 5 | Jakob | **1504** | 1542 | 1500 |
-| 6 | Liam Dimock | **1477** | 1488 | 1464 |
-| 7 | Endourx | **1443** | 1508 | 1415 |
-| 8 | MudCreek | **1412** | 1500 | 1412 |
-| 9 | Corner | **1395** | 1500 | 1395 |
+| 6 | UWE | **1487** | 1489 | 1474 |
+| 7 | Liam Dimock | **1477** | 1488 | 1464 |
+| 8 | Endourx | **1443** | 1508 | 1415 |
+| 9 | MudCreek | **1412** | 1500 | 1412 |
+| 10 | Corner | **1395** | 1500 | 1395 |
 
-_Last updated: 09 Jun 2026 18:24 UTC_
+_Last updated: 09 Jun 2026 18:53 UTC_
 <!-- LEADERBOARD_END -->
 
 ---
@@ -36,8 +37,8 @@ _Last updated: 09 Jun 2026 18:24 UTC_
 <!-- RECENT_MATCHES_START -->
 | Match | Event | Date | Winner | Ratings |
 |-------|-------|------|--------|----------|
-| M00092 | Test racing | 2026-06-09 | 🏆 **Endourx** def. Jerseytbw | Jerseytbw (-14) vs Endourx (+14) |
-| M00091 | Test racing | 2026-06-09 | 🏆 **Endourx** def. Jerseytbw | Jerseytbw (-14) vs Endourx (+14) |
+| M00096 | Testing | 2026-06-09 | 🏆 **UWE** def. Jerseytbw | Jerseytbw (-13) vs UWE (+13) |
+| M00095 | Testing | 2026-06-09 | 🏆 **Jerseytbw** def. UWE | Jerseytbw (+7) vs UWE (-7) |
 <!-- RECENT_MATCHES_END -->
 
 ---
